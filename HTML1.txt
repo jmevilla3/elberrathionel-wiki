@@ -1,0 +1,273 @@
+<html>www.ElberathionelWiki.com
+<body>
+
+
+<div style="position:relative; background:url('https://i.pinimg.com/736x/29/3a/d5/293ad57dac3574047d195b9cd8b6d564.jpg') center/cover no-repeat; ; color:#f5f5f5; padding:auto; border-radius:0; width:100%; length:auto; margin:auto; box-shadow:0 0 20px rgba(0,0,0,0.7); font-family:Georgia, serif;"> 
+
+     
+  <!-- Transparent overlay for readability -->
+  <div style="background:rgba(0,0,0,0.6); padding:40px; border-radius:12px;">
+
+    <h1 style="text-align:center; font-size:3em; color:#d4af37; letter-spacing:2px; text-shadow:0 0 15px #000;">
+      Welcome to the Elberrathionel Wiki
+    </h1>
+
+    <p style="text-align:center; font-size:1.3em; max-width:700px; margin:20px auto; line-height:1.6; color:#e0e0e0;">
+      Step into a world of legends, power, and forgotten stories.  
+      This is the hub for all lore, characters, and chronicles that define our universe.  
+      Choose your path. Forge your destiny.
+    </p>
+
+<!-- Splash Screen -->
+<div id="splash-screen" style="
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
+  color:#d4af37;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  font-family: 'Cinzel', serif;
+  text-align:center;
+  transition: opacity 1s ease;
+">
+  <h1 id="splash-title" style="
+    font-size:3em;
+    letter-spacing:4px;
+    text-shadow: 0 0 20px #000, 0 0 40px #d4af37;
+    opacity:0;
+    transform: scale(0.8);
+    transition: all 1.5s ease;
+  ">
+    The World of Elberrathionel
+  </h1>
+
+  <!-- READY BUTTON unified with gold-button style -->
+  <button id="enter-btn" class="gold-button" style="opacity:0; margin-top:40px;">
+    Ready
+  </button>
+</div>
+
+<!-- Shared Button Style -->
+<style>
+  .gold-button {
+    background: linear-gradient(135deg, #d4af37, #c19a36);
+    color: #000;
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .gold-button:hover {
+    background: #333;   /* dark grey */
+    color: #fff;        /* white text */
+    box-shadow: 0 0 12px rgba(0,0,0,0.8);
+    transform: scale(1.05);
+
+  }
+</style>
+
+<script>
+  // Animate splash elements
+  window.onload = function() {
+    const title = document.getElementById("splash-title");
+    const button = document.getElementById("enter-btn");
+
+    setTimeout(() => {
+      title.style.opacity = "1";
+      title.style.transform = "scale(1)";
+    }, 500);
+
+    setTimeout(() => {
+      button.style.opacity = "1";
+    }, 2000);
+  };
+
+  // Transition to wiki intro
+  document.getElementById("enter-btn").onclick = function() {
+    const splash = document.getElementById("splash-screen");
+    const main = document.getElementById("main-wiki");
+
+    splash.style.opacity = "0";
+    setTimeout(() => {
+      splash.style.display = "none";
+      main.style.opacity = "1";
+      main.style.transform = "translateY(0)";
+    }, 1000);
+  };
+</script>
+
+
+
+ <!-- Navigation Buttons Section -->
+<div style="margin-top:30px; text-align:center;">
+
+  <h2 style="color:#d4af37; font-size:1.6em; margin-bottom:15px; letter-spacing:1px; text-shadow:0 0 8px #000;">
+    Explore the Wiki
+  </h2>
+
+  <style>
+    .gold-button {
+      background: linear-gradient(135deg, #d4af37, #c19a36);
+      color: #000;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+      transition: all 0.3s ease-in-out;
+      display: inline-block;
+    }
+
+    .gold-button:hover {
+      background: #333;   /* Dark grey on hover */
+      color: #fff;        /* White text on hover */
+      box-shadow: 0 0 10px rgba(0,0,0,0.8);
+      transform: scale(1.05);
+    }
+  </style>
+
+  <!-- Replace the href links with your real Wiki pages -->
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:10px;">
+    <a href="/wiki/Characters" class="gold-button">Characters</a>
+    <a href="/wiki/Lore" class="gold-button">Lore</a>
+    <a href="/wiki/Factions" class="gold-button">Factions</a>
+    <a href="/wiki/Timeline" class="gold-button">Timeline</a>
+    <a href="/wiki/Items" class="gold-button">Items</a>
+    <a href="/wiki/Locations" class="gold-button">Locations</a>
+  </div>
+
+</div>
+
+
+
+
+<!-- Advanced Live Search Widget (Gold Theme) -->
+<div id="live-search-widget" style="max-width:900px; margin:18px auto; font-family:Verdana, sans-serif;">
+  <div style="display:flex; gap:8px; align-items:center;">
+    <input id="live-search-input" type="search" placeholder="Search the Elberrathionel Wiki..." 
+      style="flex:1; padding:10px 14px; border-radius:8px; border:2px solid rgba(212,175,55,0.25); background:rgba(255,255,255,0.05); color:#fff; outline:none; font-weight:600;">
+    <button id="live-search-btn" style="padding:10px 18px; border-radius:8px; border:none; background:linear-gradient(135deg,#d4af37,#c19a36); color:#000; font-weight:bold; cursor:pointer; box-shadow:0 4px 10px rgba(0,0,0,0.4);">
+      Search
+    </button>
+  </div>
+
+  <div id="live-search-results" style="margin-top:12px; border-radius:8px; overflow:auto; max-height:380px; background:rgba(20,20,20,0.75); padding:12px; border:2px solid rgba(212,175,55,0.25); color:#f9f5dc;">
+    <div id="live-search-placeholder" style="color:#cbbf77; text-align:center; padding:24px;">
+      Type a query and press Enter or click Search.
+    </div>
+  </div>
+
+  <div id="live-search-footer" style="margin-top:8px; text-align:right; color:#cbbf77; font-size:0.9em;"></div>
+</div>
+
+<script>
+(function(){
+  const input = document.getElementById('live-search-input');
+  const btn = document.getElementById('live-search-btn');
+  const resultsBox = document.getElementById('live-search-results');
+  const footer = document.getElementById('live-search-footer');
+  const placeholder = document.getElementById('live-search-placeholder');
+
+  function renderResults(items, sroffset, total) {
+    resultsBox.innerHTML = '';
+    if (!items || items.length === 0) {
+      resultsBox.innerHTML = '<div style="text-align:center; color:#cbbf77; padding:28px;">No results found.</div>';
+      footer.textContent = '';
+      return;
+    }
+    const ul = document.createElement('div');
+    ul.style.display = 'grid';
+    ul.style.gap = '10px';
+
+    items.forEach(item => {
+      const link = document.createElement('a');
+      link.href = '/wiki/' + encodeURIComponent(item.title.replace(/ /g, '_'));
+      link.style.display = 'block';
+      link.style.padding = '12px';
+      link.style.borderRadius = '6px';
+      link.style.textDecoration = 'none';
+      link.style.background = 'linear-gradient(90deg, rgba(212,175,55,0.08), rgba(193,154,54,0.05))';
+      link.style.color = '#fff9e6';
+      link.style.border = '1px solid rgba(212,175,55,0.2)';
+      link.innerHTML = '<div style="font-weight:700; font-size:1.02em; color:#ffe680;">' + item.title + '</div>' +
+                       '<div style="font-size:0.92em; color:#f2e2aa; margin-top:6px;">' + (item.snippet ? item.snippet.replace(/(<([^>]+)>)/ig, '') + '...' : '') + '</div>';
+      ul.appendChild(link);
+    });
+
+    resultsBox.appendChild(ul);
+    footer.textContent = `Showing ${items.length} results — total approx ${total}.`;
+  }
+
+  function apiSearch(query) {
+    const endpoint = '/api.php?action=query&list=search&srsearch=' + encodeURIComponent(query) + '&srlimit=10&format=json&origin=*';
+    placeholder && (placeholder.style.display = 'none');
+    resultsBox.innerHTML = '<div style="text-align:center; padding:16px; color:#cbbf77;">Searching…</div>';
+    fetch(endpoint)
+      .then(r => r.json())
+      .then(data => {
+        const search = data?.query?.search || [];
+        const totalhits = data?.query?.searchinfo?.totalhits || search.length;
+        renderResults(search, 0, totalhits);
+      })
+      .catch(err => {
+        console.error('Search API error', err);
+        resultsBox.innerHTML = '<div style="text-align:center; color:#ffcccc; padding:16px;">Search failed. Try again later.</div>';
+      });
+  }
+
+  function doSearch() {
+    const q = input.value.trim();
+    if (!q) {
+      resultsBox.innerHTML = '<div style="text-align:center; color:#cbbf77; padding:24px;">Enter a search term above.</div>';
+      footer.textContent = '';
+      return;
+    }
+    apiSearch(q);
+  }
+
+  input.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); doSearch(); }});
+  btn.addEventListener('click', (e) => { e.preventDefault(); doSearch(); });
+})();
+</script>
+
+
+
+
+
+<!-- Scrollable Contacts + Help Section -->
+<div style="margin-top:30px; background:rgba(20,20,20,0.9); border:2px solid #d4af37; border-radius:12px; padding:25px; max-width:800px; margin-left:auto; margin-right:auto; max-height:220px; overflow-y:auto; box-shadow:0 0 15px rgba(0,0,0,0.6); font-family:Verdana, sans-serif;">
+
+  <h2 style="color:#d4af37; text-align:center; margin-bottom:15px;">📜 Need Help or Have Inquiries?</h2>
+
+  <p style="margin-bottom:10px; color:#e0e0e0; line-height:1.5;">
+    If you need assistance navigating the wiki, reporting an error, or contributing, feel free to reach out through the following:
+  </p>
+
+  <ul style="color:#f5f5f5; line-height:1.6; padding-left:20px;">
+    <li><b>Email:</b> Elberathionel@gmail.com</li>
+    
+  <p style="margin-top:15px; color:#bbb; font-style:italic; text-align:center;">
+    We value community contributions. Don’t hesitate to ask for help or share your ideas!
+  </p>
+</div>
+
+
+</html>
+</body>
+
+
+
+
+
+
